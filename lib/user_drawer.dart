@@ -33,13 +33,14 @@ class UserDrawer extends StatelessWidget {
             leading: Icon(Icons.home),
           ),
           ListTile(
-            title: Text('Events'),
+            title: Text('My Events'),
             onTap: () {
               nav.pop();
               nav.pushNamed('/events');
             },
             leading: Icon(Icons.calendar_today),
           ),
+          Divider(),
           ListTile(
             title: Text('Login Page'),
             onTap: () {
