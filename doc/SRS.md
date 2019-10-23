@@ -5,10 +5,13 @@ For<Mobile Application >
 
 
 Version <1.0>
+
 Version <1.1>
 
 ### Revision History
+
 | Date | Version | Description | Author 
+----------
 | 22.10.2019 | 1.0 | First version | Marvin Böck 
 | 23.10.2019 | 1.1 | Second version | Mo Mehjazi 
  
