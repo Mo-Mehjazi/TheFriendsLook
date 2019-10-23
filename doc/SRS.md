@@ -1,17 +1,19 @@
 # TheFriendsLook
 
-# Software Requirements Specification
+## Software Requirements Specification
 For<Mobile Application >
 
 
-## Version <1.0>
+Version <1.0>
 
+Version <1.1>
 
- 
-## Revision History
-Date	Version	Description	Author
-<22.10.2019 >	<1.0>	<First version>	<Marvin Böck>
-<23.10.2019 >	<1.1>	<Second version> <Mo Mehjazi>
+### Revision History
+
+| Date | Version | Description | Author 
+| --- | --- | --- | ---
+| 22.10.2019 | 1.0 | First version | Marvin Böck 
+| 23.10.2019 | 1.1 | Second version | Mo Mehjazi 
  
 # Software Requirements Specification 
 ## 1.	Introduction
@@ -28,8 +30,8 @@ UC	Use Case
 DB	Database which stores the data
 
 ## 1.4	References
-# Blog: https://thefriendslook.wordpress.com
-# GIT-Hub: https://github.com/TheFriendsLook/TheFriendsLook
+### Blog: https://thefriendslook.wordpress.com
+### GIT-Hub: https://github.com/TheFriendsLook/TheFriendsLook
 UCD:
 ## 1.5	Overview
 The following chapters are about our vision and perspective, the software requirements, the demands we have, licensing and the technical realization of this project.
@@ -40,7 +42,7 @@ The App should help people to use their free time better. It should help to plan
 -	Send your friends appointment requests
  
 ## 3.	Specific Requirements 
- 
+![Alt-Text](./images/UCD.jpg)
 ## 3.1	Functionality
 ### 3.1.1	<Mobile Application>
 Admin:
