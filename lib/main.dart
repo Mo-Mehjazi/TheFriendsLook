@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 // Local
 import './auth_page.dart';
+import './events_page.dart';
 
 void main() => runApp(App());
 
@@ -15,8 +16,9 @@ class App extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
-        '/':     (BuildContext context) => DemoPage(),
-        '/auth': (BuildContext context) => AuthPage(),
+        '/':       (BuildContext context) => DemoPage(),
+        '/auth':   (BuildContext context) => AuthPage(),
+        '/events': (BuildContext context) => EventsPage(),
         // ...
       },
     );
@@ -38,6 +40,12 @@ class DemoPage extends StatelessWidget {
               child: Text('Open Auth Page'),
               onPressed: () {
                 Navigator.pushNamed(context, '/auth');
+              },
+            ),
+            RaisedButton(
+              child: Text('Open Events Page'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/events');
               },
             ),
           ],
