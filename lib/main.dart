@@ -31,7 +31,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
-        fontFamily: 'Open Sans',
+        //fontFamily: 'Open Sans',
       ),
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
