@@ -40,6 +40,13 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  fonts:
+  - family: Open Sans
+    fonts:
+      - asset: assets/fonts/OpenSans-Regular.ttf
+      - asset: assets/fonts/OpenSans-Italic.ttf
+        style: italic
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
