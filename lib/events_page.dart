@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 // Local
 import './event_card.dart';
 import './event_provider.dart';
+import './user_drawer.dart';
 
 class EventsPage extends StatelessWidget {
   @override
@@ -13,6 +14,7 @@ class EventsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Events'),
       ),
+      drawer: UserDrawer(),
       body: Consumer<EventProvider>(
         builder: (context, eventProvider, child) {
           return ListView.builder(

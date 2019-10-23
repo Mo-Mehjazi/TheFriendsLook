@@ -6,11 +6,20 @@ import 'package:provider/provider.dart';
 import './auth_page.dart';
 import './events_page.dart';
 import './event_provider.dart';
+import './account_provider.dart';
+import './user_drawer.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      builder: (BuildContext context) => EventProvider(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          builder: (BuildContext context) => EventProvider(),
+        ),
+        ChangeNotifierProvider(
+          builder: (BuildContext context) => AccountProvider(),
+        ),
+      ],
       child: App(),
     ),
   );
@@ -26,8 +35,8 @@ class App extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
-        '/':       (BuildContext context) => DemoPage(),
-        '/auth':   (BuildContext context) => AuthPage(),
+        '/': (BuildContext context) => DemoPage(),
+        '/auth': (BuildContext context) => AuthPage(),
         '/events': (BuildContext context) => EventsPage(),
         // ...
       },
@@ -38,29 +47,12 @@ class App extends StatelessWidget {
 class DemoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('Demo Page'),
       ),
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            RaisedButton(
-              child: Text('Open Auth Page'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/auth');
-              },
-            ),
-            RaisedButton(
-              child: Text('Open Events Page'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/events');
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: UserDrawer(),
+      body: Container(),
     );
   }
 }
