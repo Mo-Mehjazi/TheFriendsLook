@@ -1,10 +1,20 @@
 // Flutter
 import 'package:flutter/material.dart';
+// Packages
+import 'package:provider/provider.dart';
 // Local
 import './auth_page.dart';
 import './events_page.dart';
+import './event_provider.dart';
 
-void main() => runApp(App());
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      builder: (BuildContext context) => EventProvider(),
+      child: App(),
+    ),
+  );
+}
 
 class App extends StatelessWidget {
   @override

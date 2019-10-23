@@ -17,102 +17,83 @@ class Event {
 
 class EventCard extends StatelessWidget {
   final Event event;
+  final Function onPressed;
 
-  EventCard(this.event);
+  EventCard(this.event, this.onPressed);
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      semanticContainer: true,
-      clipBehavior: Clip.antiAliasWithSaveLayer,
-      child: Container(
-        child: Stack(
-          alignment: Alignment.topLeft,
-          children: <Widget>[
-            Image.network(
-              event.imageUrl,
-              fit: BoxFit.fill,
-            ),
-            Container(
-              padding: EdgeInsets.all(10),
-              margin: EdgeInsets.all(10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        event.title,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                          color: eventCardFontColor,
-                        ),
-                      ),
-                      Chip(
-                        label: Text(event.author),
-                        backgroundColor: eventCardWhiteColor,
-                      ),
-                      Chip(
-                        backgroundColor: eventCardWhiteColor,
-                        label: Text(
-                          '${event.numSubscribers} / ${event.maxSubscribers}',
-                          style: TextStyle(
-                              //color: Colors.white,
-                              //fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    event.description,
-                    style: TextStyle(
-                      color: eventCardFontColor,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
+    return GestureDetector(
+      onTap: onPressed,
+      child: Card(
+        semanticContainer: true,
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        child: Container(
+          child: Stack(
+            alignment: Alignment.topLeft,
+            children: <Widget>[
+              Image.network(
+                event.imageUrl,
+                fit: BoxFit.fill,
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Icon(
-                          Icons.location_on,
-                          color: eventCardFontColor,
-                        ),
                         Text(
-                          'View in Maps',
+                          event.title,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            fontSize: 18,
                             color: eventCardFontColor,
+                          ),
+                        ),
+                        Chip(
+                          label: Text(event.author),
+                          backgroundColor: eventCardWhiteColor,
+                        ),
+                        Chip(
+                          backgroundColor: eventCardWhiteColor,
+                          label: Text(
+                            '${event.numSubscribers} / ${event.maxSubscribers}',
+                            style: TextStyle(
+                                //color: Colors.white,
+                                //fontWeight: FontWeight.bold,
+                                ),
                           ),
                         ),
                       ],
                     ),
-                    padding: EdgeInsets.all(6),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: eventCardWhiteColor,
+                    Text(
+                      event.description,
+                      style: TextStyle(
+                        color: eventCardFontColor,
+                      ),
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: eventCardWhiteColor,
+                ),
               ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: eventCardWhiteColor,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        elevation: 5,
+        margin: EdgeInsets.all(10),
       ),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-      ),
-      elevation: 5,
-      margin: EdgeInsets.all(10),
     );
   }
 }
