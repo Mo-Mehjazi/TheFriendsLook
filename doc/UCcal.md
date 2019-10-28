@@ -40,7 +40,8 @@ This use case shows the user his calendar with all his appointments. The calenda
 #### 2.1.1	Flow Diagram
 ![Alt-Text](./images/UCcal.jpg)
 #### 2.1.2	Mock up
-tbd
+![Alt-Text](./images/UCMU.jpg)
+
 2.2	Alternative Flows
 n/a
 #### 3.	Special Requirements
