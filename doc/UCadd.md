@@ -39,7 +39,7 @@ This use case gives the user the opportunity to add or delete friends. This make
 •	Choose the friends, which you like to add or delete
 •	Click at “add friends” or “delete friends”
 #### 2.1.1	Flow Diagram
-![Alt-Text](./images/UCadd.jpg)
+![Alt-Text](./images/UCadd2.jpg)
 #### 2.1.2	Mock up
 tbd
 2.2	Alternative Flows
