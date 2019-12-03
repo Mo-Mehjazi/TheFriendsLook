@@ -33,7 +33,8 @@ Version <1.0>
 
 ### 1.	Use-Case Name 
 1.1	Brief Description
-This use case is to show the ability to creat events, Send friends appointment requests and to accept or refuse appointments requests.
+1.1.1 <This use case is to show the ability to creat events, Send friends appointment requests and to accept or refuse appointments requests.>
+
 ### 2.	Flow of Events
 2.1	Basic Flow 
 •	Start the app
@@ -45,7 +46,7 @@ This use case is to show the ability to creat events, Send friends appointment r
 #### 2.1.1	Flow Diagram
 ![Alt-Text](./images/UCappo.jpg)
 #### 2.1.2	Mock up
-![Alt-Text](./images/MUappo.jpg)
+![Alt-Text](./images/MUappo.jpeg)
 
 2.2	Alternative Flows
 n/a
@@ -58,5 +59,5 @@ User has to use the calendar.
 User is able to see and edit his appointments.
 ### 6.	Extension Points
 
-#### 6.1	<Add Events Pics to describe the Event>
+#### 6.1	Add Events Pics to describe the Event
 It is possible to add picture to the events to make it more cooler.
