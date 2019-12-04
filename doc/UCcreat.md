@@ -62,5 +62,5 @@ App must be installed
 User is able to use the app
 ### 6.	Extension Points
 
-#### 6.1	<Add Log in with Email>
+#### 6.1	Add Log in with Email
 it is possible to create an account
