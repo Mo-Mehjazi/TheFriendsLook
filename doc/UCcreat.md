@@ -30,7 +30,7 @@ Version <1.0>
 6.3 <Sign in with Facebook>	
 6.4 <Sign in with Twitter>
  
-## Use-Case Specification: < Appointments >
+## Use-Case Specification: < Create Account >
 
 ### 1.	Use-Case Name 
 1.1	Brief Description
