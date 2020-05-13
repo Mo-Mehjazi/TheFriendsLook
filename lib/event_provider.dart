@@ -39,4 +39,9 @@ class EventProvider extends ChangeNotifier {
   ];
 
   List<Event> get events => _events;
+
+  List<Event> fetchEventsFromDatabase() {
+    // TODO: use a real database
+    return events;
+  }
 }
