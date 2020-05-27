@@ -14,10 +14,10 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          builder: (BuildContext context) => EventProvider(),
+          builder: (BuildContext context) => EventProvider(), create: (BuildContext context) {},
         ),
         ChangeNotifierProvider(
-          builder: (BuildContext context) => AccountProvider(),
+          builder: (BuildContext context) => AccountProvider(), create: (BuildContext context) {},
         ),
       ],
       child: App(),
