@@ -5,8 +5,8 @@ import 'package:provider/provider.dart';
 import 'package:the_friends_look/controllers/db_controller.dart';
 import 'package:the_friends_look/models/event.dart';
 // Local
-import './event_card.dart';
-import './user_drawer.dart';
+import '../widgets/event_card.dart';
+import '../widgets/user_drawer.dart';
 
 class EventsPage extends StatelessWidget {
   final List<Event> events = DbController().getAllEvents();
@@ -22,8 +22,7 @@ class EventsPage extends StatelessWidget {
           itemCount: events.length,
           itemBuilder: (BuildContext context, int index) {
             return EventCard(events[index], () {
-              Navigator.pushNamed(context, '/event',
-                  arguments: events[index]);
+              Navigator.pushNamed(context, '/event', arguments: events[index]);
             });
           },
         ));

@@ -1,13 +1,12 @@
 // Flutter
 import 'package:flutter/material.dart';
-// Packages
-import 'package:the_friends_look/controllers/db_controller.dart';
+import '../controllers/user_controller.dart';
 
 class UserDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var nav = Navigator.of(context);
-    var currentUser = DbController().getUserById(0);
+    var currentUser = UserController().getCurrentUser();
     return Drawer(
       child: ListView(
         children: <Widget>[
@@ -21,25 +20,21 @@ class UserDrawer extends StatelessWidget {
           ListTile(
             title: Text('Home'),
             onTap: () {
-              nav.pop();
-              nav.pushNamed('/');
+              nav.pushReplacementNamed('/');
             },
             leading: Icon(Icons.home),
           ),
           ListTile(
-            title: Text('My Events'),
+            title: Text('Discover Events'),
             onTap: () {
-              nav.pop();
-              nav.pushNamed('/events');
+              nav.pushReplacementNamed('/discover');
             },
             leading: Icon(Icons.calendar_today),
           ),
-          Divider(),
           ListTile(
-            title: Text('Login Page'),
+            title: Text('My Subscriptions'),
             onTap: () {
-              // nav.pop();
-              nav.pushNamed('/auth');
+              nav.pushReplacementNamed('/subscribed');
             },
             leading: Icon(Icons.group_work),
           )
