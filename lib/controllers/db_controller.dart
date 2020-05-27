@@ -6,7 +6,7 @@ import '../util/fake_db_storage.dart';
 class DbController {
   // Singleton
   static final DbController _singleton = DbController._internal();
-  
+
   factory DbController() {
     return _singleton;
   }
@@ -39,7 +39,8 @@ class DbController {
   }
 
   List<Event> getSubscribedEvents(int userId) {
-    var subscribtions = dbStorage.subscribtions.where((s) => s.userId == userId).toList();
+    var subscribtions =
+        dbStorage.subscribtions.where((s) => s.userId == userId).toList();
     List<Event> events = [];
 
     for (var i = 0; i < subscribtions.length; ++i) {
@@ -50,7 +51,8 @@ class DbController {
   }
 
   List<User> getSubscribersForEvent(int eventId) {
-    var subscribtions = dbStorage.subscribtions.where((s) => s.eventId == eventId).toList();
+    var subscribtions =
+        dbStorage.subscribtions.where((s) => s.eventId == eventId).toList();
     List<User> subscribers = [];
 
     for (var i = 0; i < subscribtions.length; ++i) {
@@ -70,10 +72,7 @@ class DbController {
   void subscribe(int userId, int eventId) {
     // TODO: Check for event max subscribers
 
-    dbStorage.subscribtions.add(Subscribtion(
-      eventId,
-      userId
-    ));
+    dbStorage.subscribtions.add(Subscribtion(eventId, userId));
   }
 
   void unsubscribe(int userId, int eventId) {

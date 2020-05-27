@@ -51,24 +51,11 @@ class FakeDbStorage {
   ];
 
   final List<User> users = [
-    User(
-      0,
-      "peter",
-      "peter@gmail.com",
-      "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png"
-    ),
-    User(
-      1,
-      "ute",
-      "ute@gmail.com",
-      "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png"
-    ),
+    User(0, "peter", "peter@gmail.com",
+        "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png"),
+    User(1, "ute", "ute@gmail.com",
+        "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png"),
   ];
 
-  final List<Subscribtion> subscribtions = [
-    Subscribtion(
-      0,
-      1
-    )
-  ];
+  final List<Subscribtion> subscribtions = [Subscribtion(0, 1)];
 }

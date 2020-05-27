@@ -7,5 +7,6 @@ class Event {
   int maxSubscribers;
   String imageUrl;
 
-  Event(this.id, this.authorId, this.title, this.description, this.date, this.maxSubscribers, this.imageUrl);
+  Event(this.id, this.authorId, this.title, this.description, this.date,
+      this.maxSubscribers, this.imageUrl);
 }

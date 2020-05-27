@@ -18,7 +18,8 @@ class DiscoveryPage extends StatelessWidget {
       ),
       drawer: UserDrawer(),
       body: EventList(events, 'discovery', (Event event) {
-        Navigator.pushNamed(context, '/event', arguments: EventPageArguments(event, 'discovery'));
+        Navigator.pushNamed(context, '/event',
+            arguments: EventPageArguments(event, 'discovery'));
       }),
     );
   }

@@ -58,12 +58,7 @@ class EventCard extends StatelessWidget {
                         Chip(
                           backgroundColor: eventCardWhiteColor,
                           label: Text(
-                            '${numSubscribers} / ${event.maxSubscribers}',
-                            style: TextStyle(
-                                //color: Colors.white,
-                                //fontWeight: FontWeight.bold,
-                                ),
-                          ),
+                              '${numSubscribers} / ${event.maxSubscribers}'),
                         ),
                       ],
                     ),

@@ -11,7 +11,8 @@ import './event_page.dart';
 class SubscriptionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var events = DbController().getSubscribedEvents(UserController().getCurrentUser().id);
+    var events = DbController()
+        .getSubscribedEvents(UserController().getCurrentUser().id);
 
     return Scaffold(
       appBar: AppBar(
@@ -19,7 +20,8 @@ class SubscriptionPage extends StatelessWidget {
       ),
       drawer: UserDrawer(),
       body: EventList(events, 'subscription', (Event event) {
-        Navigator.pushNamed(context, '/event', arguments: EventPageArguments(event, 'subscription'));
+        Navigator.pushNamed(context, '/event',
+            arguments: EventPageArguments(event, 'subscription'));
       }),
     );
   }

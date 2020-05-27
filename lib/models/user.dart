@@ -6,4 +6,3 @@ class User {
 
   User(this.id, this.username, this.email, this.avatarUri);
 }
-
