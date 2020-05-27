@@ -54,12 +54,14 @@ class FakeDbStorage {
     User(
       0,
       "peter",
-      "peter@gmail.com"
+      "peter@gmail.com",
+      "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png"
     ),
     User(
       1,
       "ute",
-      "ute@gmail.com"
+      "ute@gmail.com",
+      "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png"
     ),
   ];
 

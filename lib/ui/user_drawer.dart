@@ -15,8 +15,7 @@ class UserDrawer extends StatelessWidget {
             accountEmail: Text(currentUser.email),
             accountName: Text(currentUser.username),
             currentAccountPicture: CircleAvatar(
-              backgroundColor: Colors.deepPurple,
-              child: Text('DE'),
+              backgroundImage: NetworkImage(currentUser.avatarUri),
             ),
           ),
           ListTile(
