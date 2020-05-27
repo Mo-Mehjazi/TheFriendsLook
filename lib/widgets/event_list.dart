@@ -15,7 +15,7 @@ class EventList extends StatelessWidget {
       itemCount: events.length,
       itemBuilder: (BuildContext context, int index) {
         return EventCard(events[index], () {
-          this.handleClick(events[index].id);
+          this.handleClick(events[index]);
         });
       },
     );

@@ -5,6 +5,8 @@ import '../controllers/user_controller.dart';
 import '../controllers/db_controller.dart';
 import '../widgets/user_drawer.dart';
 import '../widgets/event_list.dart';
+import '../models/event.dart';
+import './event_page.dart';
 
 class SubscriptionPage extends StatelessWidget {
   @override
@@ -16,8 +18,8 @@ class SubscriptionPage extends StatelessWidget {
         title: Text('Subscribtion Page'),
       ),
       drawer: UserDrawer(),
-      body: EventList(events, (int eventId) {
-        print("Selected event with id $eventId");
+      body: EventList(events, (Event event) {
+        Navigator.pushNamed(context, '/event', arguments: EventPageArguments(event));
       }),
     );
   }

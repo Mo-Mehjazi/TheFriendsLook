@@ -1,25 +1,30 @@
 // Flutter
 import 'package:flutter/material.dart';
 
+import '../controllers/user_controller.dart';
 import '../controllers/db_controller.dart';
 import '../widgets/user_drawer.dart';
 import '../widgets/event_list.dart';
 import '../models/event.dart';
-import './event_page.dart';
 
-class DiscoveryPage extends StatelessWidget {
+class EventPageArguments {
+  final Event event;
+
+  EventPageArguments(this.event);
+}
+
+class EventPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var events = DbController().getAllEvents();
+    final EventPageArguments args = ModalRoute.of(context).settings.arguments;
+    final title = args.event.title;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Discovery Page'),
+        title: Text('$title'),
       ),
       drawer: UserDrawer(),
-      body: EventList(events, (Event event) {
-        Navigator.pushNamed(context, '/event', arguments: EventPageArguments(event));
-      }),
+      body: Text('$title'),
     );
   }
 }
