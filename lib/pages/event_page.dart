@@ -1,5 +1,6 @@
 // Flutter
 import 'package:flutter/material.dart';
+import 'package:the_friends_look/controllers/db_controller.dart';
 
 import '../models/event.dart';
 
@@ -17,6 +18,8 @@ class EventPage extends StatelessWidget {
     final event = args.event;
     final imageTag = args.imageTag;
 
+    final author = DbController().getAuthorForEvent(event.id);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(event.title),
@@ -30,6 +33,24 @@ class EventPage extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
+          Row(
+            children: <Widget>[
+              Padding(
+                child: CircleAvatar(
+                  backgroundImage: NetworkImage(author.avatarUri),
+                ),
+                padding: EdgeInsets.all(5),
+              ),
+              Chip(label: Text(author.username)),
+              Expanded(
+                child: Container(),
+              ),
+              Padding(
+                child: Text(event.date.toString()),
+                padding: EdgeInsets.all(5),
+              ),
+            ],
+          )
         ],
       ),
     );
