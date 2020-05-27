@@ -1,47 +1,62 @@
-// Flutter
-import 'package:flutter/material.dart';
-import 'package:the_friends_look/event_card.dart';
+import '../models/event.dart';
+import '../models/user.dart';
+import '../models/subscription.dart';
 
-class EventProvider extends ChangeNotifier {
-  final List<Event> _events = [
+class FakeDbStorage {
+  final List<Event> events = [
     Event(
+      0,
+      0,
       'Grillen im Garten',
-      'MegaGrillMän',
       'Saftige Steaks und Krosse Krabben, hier gibt es nur das beste.',
-      4,
+      DateTime.now(),
       20,
       'https://i.pinimg.com/originals/6d/78/96/6d7896263c68fca18d1ee10e44dd4160.jpg',
     ),
     Event(
+      1,
+      0,
       'Fahrradfahren ._.',
-      'Inge I.',
       'Ich mag Schmerzen. Deshalb fahre ich auf dem Mount Everest Fahrrad.',
-      4,
+      DateTime.now(),
       10,
       'https://www.spontacts.com/freizeitmagazin/wp-content/uploads/2018/04/freizeitaktivit%C3%A4ten-fr%C3%BChling_750x500-750x500.jpg',
     ),
     Event(
+      2,
+      0,
       'XBox Zock Session',
-      'Albert U.',
       'Ganzen Tag chillen und zocken.',
-      4,
+      DateTime.now(),
       10,
       'https://static2.ubi.com/gamesites/rainbow6/rainbowsixsiege-bg.jpg',
     ),
     Event(
+      3,
+      0,
       'Grüner Abend 2',
-      'Albert U.',
       'Hier sollte ein langer Beschreibungstext stehen, den habe ich mir aber gespart.',
-      4,
+      DateTime.now(),
       10,
       'https://i.pinimg.com/originals/6d/78/96/6d7896263c68fca18d1ee10e44dd4160.jpg',
     ),
   ];
 
-  List<Event> get events => _events;
+  final List<User> users = [
+    User(
+      0,
+      "peter"
+    ),
+    User(
+      1,
+      "ute"
+    ),
+  ];
 
-  List<Event> fetchEventsFromDatabase() {
-    // TODO: use a real database
-    return events;
-  }
+  final List<Subscribtion> subscribtions = [
+    Subscribtion(
+      0,
+      1
+    )
+  ];
 }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // Packages
 import 'package:provider/provider.dart';
 // Local
-import './account_provider.dart';
+import '../account_provider.dart';
 
 class UserDrawer extends StatelessWidget {
   @override

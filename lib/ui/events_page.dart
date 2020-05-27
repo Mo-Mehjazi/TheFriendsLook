@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 // Local
 import './event_card.dart';
-import './event_provider.dart';
+import '../event_provider.dart';
 import './user_drawer.dart';
 
 class EventsPage extends StatelessWidget {
