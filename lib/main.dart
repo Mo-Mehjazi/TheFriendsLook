@@ -3,26 +3,12 @@ import 'package:flutter/material.dart';
 // Packages
 import 'package:provider/provider.dart';
 // Local
-import './auth_page.dart';
-import './events_page.dart';
-import './event_provider.dart';
-import './account_provider.dart';
-import './user_drawer.dart';
+import './ui/auth_page.dart';
+import './ui/events_page.dart';
+import './ui/user_drawer.dart';
 
 void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          builder: (BuildContext context) => EventProvider(), create: (BuildContext context) {},
-        ),
-        ChangeNotifierProvider(
-          builder: (BuildContext context) => AccountProvider(), create: (BuildContext context) {},
-        ),
-      ],
-      child: App(),
-    ),
-  );
+  runApp(App());
 }
 
 class App extends StatelessWidget {

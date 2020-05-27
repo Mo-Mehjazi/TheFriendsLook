@@ -1,19 +1,9 @@
 import 'package:flutter/material.dart';
+import '../models/event.dart';
+import '../controllers/db_controller.dart';
 
 const eventCardFontColor = Colors.black;
 const eventCardWhiteColor = Colors.white38;
-
-class Event {
-  String title;
-  String author;
-  String description;
-  int numSubscribers;
-  int maxSubscribers;
-  String imageUrl;
-
-  Event(this.title, this.author, this.description, this.numSubscribers,
-      this.maxSubscribers, this.imageUrl);
-}
 
 class EventCard extends StatelessWidget {
   final Event event;
@@ -54,13 +44,13 @@ class EventCard extends StatelessWidget {
                           ),
                         ),
                         Chip(
-                          label: Text(event.author),
+                          label: Text(DbController().getUserById(event.authorId).username),
                           backgroundColor: eventCardWhiteColor,
                         ),
                         Chip(
                           backgroundColor: eventCardWhiteColor,
                           label: Text(
-                            '${event.numSubscribers} / ${event.maxSubscribers}',
+                            '${DbController().getSubscribersForEvent(event.id).length} / ${event.maxSubscribers}',
                             style: TextStyle(
                                 //color: Colors.white,
                                 //fontWeight: FontWeight.bold,

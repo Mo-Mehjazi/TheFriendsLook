@@ -5,10 +5,16 @@ import '../util/fake_db_storage.dart';
 
 class DbController {
   // Singleton
-  static DbController _controller = DbController();
-  static DbController get instance => _controller;
+  static final DbController _singleton = DbController._internal();
+  
+  factory DbController() {
+    return _singleton;
+  }
 
-  FakeDbStorage dbStorage;
+  DbController._internal();
+
+  // Fake database storage
+  final FakeDbStorage dbStorage = FakeDbStorage();
 
   // Methods
   Event getEventById(int eventId) {
@@ -62,6 +68,8 @@ class DbController {
   }
 
   void subscribe(int userId, int eventId) {
+    // TODO: Check for event max subscribers
+
     dbStorage.subscribtions.add(Subscribtion(
       eventId,
       userId

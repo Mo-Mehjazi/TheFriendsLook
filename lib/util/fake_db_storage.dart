@@ -3,6 +3,14 @@ import '../models/user.dart';
 import '../models/subscription.dart';
 
 class FakeDbStorage {
+  static final FakeDbStorage _singleton = FakeDbStorage._internal();
+
+  factory FakeDbStorage() {
+    return _singleton;
+  }
+
+  FakeDbStorage._internal();
+
   final List<Event> events = [
     Event(
       0,
@@ -45,11 +53,13 @@ class FakeDbStorage {
   final List<User> users = [
     User(
       0,
-      "peter"
+      "peter",
+      "peter@gmail.com"
     ),
     User(
       1,
-      "ute"
+      "ute",
+      "ute@gmail.com"
     ),
   ];
 

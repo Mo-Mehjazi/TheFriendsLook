@@ -1,28 +1,23 @@
 // Flutter
 import 'package:flutter/material.dart';
 // Packages
-import 'package:provider/provider.dart';
-// Local
-import '../account_provider.dart';
+import 'package:the_friends_look/controllers/db_controller.dart';
 
 class UserDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var nav = Navigator.of(context);
+    var currentUser = DbController().getUserById(0);
     return Drawer(
       child: ListView(
         children: <Widget>[
-          Consumer<AccountProvider>(
-            builder: (context, accountProvider, child) {
-              return UserAccountsDrawerHeader(
-                accountEmail: Text(accountProvider.email),
-                accountName: Text(accountProvider.username),
-                currentAccountPicture: CircleAvatar(
-                  backgroundColor: Colors.deepPurple,
-                  child: Text('DE'),
-                ),
-              );
-            },
+          UserAccountsDrawerHeader(
+            accountEmail: Text(currentUser.email),
+            accountName: Text(currentUser.username),
+            currentAccountPicture: CircleAvatar(
+              backgroundColor: Colors.deepPurple,
+              child: Text('DE'),
+            ),
           ),
           ListTile(
             title: Text('Home'),
