@@ -23,7 +23,6 @@ class EventPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('$title'),
       ),
-      drawer: UserDrawer(),
       body: Text('$title'),
     );
   }
