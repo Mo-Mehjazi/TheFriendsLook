@@ -19,7 +19,7 @@ class SubscriptionPage extends StatelessWidget {
       ),
       drawer: UserDrawer(),
       body: EventList(events, (Event event) {
-        Navigator.pushNamed(context, '/event', arguments: EventPageArguments(event));
+        Navigator.pushNamed(context, '/event', arguments: EventPageArguments(event, 'subscription'));
       }),
     );
   }

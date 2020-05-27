@@ -1,29 +1,37 @@
 // Flutter
 import 'package:flutter/material.dart';
 
-import '../controllers/user_controller.dart';
-import '../controllers/db_controller.dart';
-import '../widgets/user_drawer.dart';
-import '../widgets/event_list.dart';
 import '../models/event.dart';
 
 class EventPageArguments {
   final Event event;
+  final String imageTag;
 
-  EventPageArguments(this.event);
+  EventPageArguments(this.event, this.imageTag);
 }
 
 class EventPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final EventPageArguments args = ModalRoute.of(context).settings.arguments;
-    final title = args.event.title;
+    final event = args.event;
+    final imageTag = args.imageTag;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('$title'),
+        title: Text(event.title),
       ),
-      body: Text('$title'),
+      body: Column(
+        children: <Widget>[
+          Hero(
+            tag: event.imageUrl + imageTag,
+            child: Image.network(
+              event.imageUrl,
+              fit: BoxFit.fill,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

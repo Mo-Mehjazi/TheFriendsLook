@@ -26,9 +26,12 @@ class EventCard extends StatelessWidget {
           child: Stack(
             alignment: Alignment.topLeft,
             children: <Widget>[
-              Image.network(
-                event.imageUrl,
-                fit: BoxFit.fill,
+              Hero(
+                tag: event.imageUrl + 'page',
+                child: Image.network(
+                  event.imageUrl,
+                  fit: BoxFit.fill,
+                ),
               ),
               Container(
                 padding: EdgeInsets.all(10),

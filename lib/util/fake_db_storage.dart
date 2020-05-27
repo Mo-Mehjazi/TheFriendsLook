@@ -46,7 +46,7 @@ class FakeDbStorage {
       'Hier sollte ein langer Beschreibungstext stehen, den habe ich mir aber gespart.',
       DateTime.now(),
       10,
-      'https://i.pinimg.com/originals/6d/78/96/6d7896263c68fca18d1ee10e44dd4160.jpg',
+      'https://www.gruene-muenchen.de/wp-content/uploads/2020/02/fb_Steckerlfisch-MargareteKatrin_1920x1005px-500x262.png',
     ),
   ];
 
