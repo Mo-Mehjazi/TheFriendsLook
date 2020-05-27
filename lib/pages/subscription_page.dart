@@ -15,7 +15,7 @@ class SubscriptionPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Subscribtion Page'),
+        title: Text('Subscription Page'),
       ),
       drawer: UserDrawer(),
       body: EventList(events, (Event event) {
