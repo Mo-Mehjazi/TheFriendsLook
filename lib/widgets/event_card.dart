@@ -8,9 +8,10 @@ const eventCardWhiteColor = Colors.white38;
 
 class EventCard extends StatelessWidget {
   final Event event;
+  final String tag;
   final Function onPressed;
 
-  EventCard(this.event, this.onPressed);
+  EventCard(this.event, this.tag, this.onPressed);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class EventCard extends StatelessWidget {
             alignment: Alignment.topLeft,
             children: <Widget>[
               Hero(
-                tag: event.imageUrl + 'page',
+                tag: event.imageUrl + tag,
                 child: Image.network(
                   event.imageUrl,
                   fit: BoxFit.fill,
