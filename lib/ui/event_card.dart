@@ -13,6 +13,9 @@ class EventCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var authorName = DbController().getUserById(event.authorId).username;
+    var numSubscribers = DbController().getSubscribersForEvent(event.id).length;
+
     return GestureDetector(
       onTap: onPressed,
       child: Card(
@@ -44,13 +47,13 @@ class EventCard extends StatelessWidget {
                           ),
                         ),
                         Chip(
-                          label: Text(DbController().getUserById(event.authorId).username),
+                          label: Text(authorName),
                           backgroundColor: eventCardWhiteColor,
                         ),
                         Chip(
                           backgroundColor: eventCardWhiteColor,
                           label: Text(
-                            '${DbController().getSubscribersForEvent(event.id).length} / ${event.maxSubscribers}',
+                            '${numSubscribers} / ${event.maxSubscribers}',
                             style: TextStyle(
                                 //color: Colors.white,
                                 //fontWeight: FontWeight.bold,

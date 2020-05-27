@@ -51,7 +51,7 @@ class DbController {
 
   List<User> getSubscribersForEvent(int eventId) {
     var subscribtions = dbStorage.subscribtions.where((s) => s.eventId == eventId).toList();
-    var subscribers = [];
+    List<User> subscribers = [];
 
     for (var i = 0; i < subscribtions.length; ++i) {
       subscribers.add(dbStorage.users[subscribtions[i].userId]);

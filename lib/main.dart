@@ -1,7 +1,5 @@
 // Flutter
 import 'package:flutter/material.dart';
-// Packages
-import 'package:provider/provider.dart';
 // Local
 import './ui/auth_page.dart';
 import './ui/events_page.dart';
@@ -16,7 +14,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.lightBlue,
         //fontFamily: 'Open Sans',
       ),
       initialRoute: '/',
