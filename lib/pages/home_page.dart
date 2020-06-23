@@ -12,9 +12,18 @@ class HomePage extends StatelessWidget {
       drawer: UserDrawer(),
       body: Column(
         children: <Widget>[
-          Image(
-            image: AssetImage('assets/images/Logo.JPG'),
+          Container(
+            height: 10
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Image.asset(
+                'assets/images/Logo.JPG',
+                scale: 3.5,
+              ),
+            ],
+          )
         ],
       ),
     );
