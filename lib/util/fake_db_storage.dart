@@ -17,8 +17,7 @@ class FakeDbStorage {
       0,
       'Grillen im Garten',
       'Saftige Steaks und Krosse Krabben, hier gibt es nur das beste.',
-      DateTime(2020, 6, 23
-      ),
+      DateTime(2020, 6, 23),
       20,
       'https://i.pinimg.com/originals/6d/78/96/6d7896263c68fca18d1ee10e44dd4160.jpg',
     ),
@@ -54,7 +53,7 @@ class FakeDbStorage {
   final List<User> users = [
     User(0, "peter", "peter@gmail.com",
         "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png"),
-    User(1, "ute", "ute@gmail.com",
+    User(1, "Demo", "demo@thefriendslook.com",
         "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png"),
   ];
 
