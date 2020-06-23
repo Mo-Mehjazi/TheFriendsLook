@@ -10,7 +10,12 @@ class HomePage extends StatelessWidget {
         title: Text('Home Page'),
       ),
       drawer: UserDrawer(),
-      body: Container(),
+      body: Column(
+        children: <Widget>[
+          
+        ],
+      
+      ),
     );
   }
 }
