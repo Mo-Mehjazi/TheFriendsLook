@@ -10,6 +10,12 @@ class HomePage extends StatelessWidget {
         title: Text('Home Page'),
       ),
       drawer: UserDrawer(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/create');
+        },
+        child: Icon(Icons.add)
+      ),
       body: Column(
         children: <Widget>[
           Container(
