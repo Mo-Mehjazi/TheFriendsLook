@@ -25,11 +25,18 @@ class UserDrawer extends StatelessWidget {
             leading: Icon(Icons.home),
           ),
           ListTile(
+            title: Text('Calendar'),
+            onTap: () {
+              nav.pushReplacementNamed('/calendar');
+            },
+            leading: Icon(Icons.calendar_today),
+          ),
+          ListTile(
             title: Text('Discover Events'),
             onTap: () {
               nav.pushReplacementNamed('/discover');
             },
-            leading: Icon(Icons.calendar_today),
+            leading: Icon(Icons.directions_boat),
           ),
           ListTile(
             title: Text('My Subscriptions'),

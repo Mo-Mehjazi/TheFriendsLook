@@ -3,6 +3,8 @@ import '../models/user.dart';
 import '../models/subscription.dart';
 import '../util/fake_db_storage.dart';
 
+import 'package:collection/collection.dart';
+
 class DbController {
   // Singleton
   static final DbController _singleton = DbController._internal();
@@ -81,5 +83,27 @@ class DbController {
 
   void unsubscribe(int userId, int eventId) {
     // TODO
+  }
+
+  // Please dont look at this code, my eyes are already bleeding
+  Map<DateTime, List> fetchCalendarEvents() {
+    final Map<DateTime, List> groupedEvents = groupBy(getAllEvents(), (event) => event.date);
+    final Map<DateTime, List> result = {};
+
+    groupedEvents.forEach((date, events) => {
+      events.forEach((e) => {
+        if (!result.containsKey(date)) {
+          result[date] = new List()
+        },
+
+        result[date].add({
+          'name': e.title,
+          'isDone': false,
+          'id': e.id
+        })
+      })
+    });
+
+    return result;
   }
 }

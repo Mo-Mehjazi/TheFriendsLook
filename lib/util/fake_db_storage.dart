@@ -17,7 +17,8 @@ class FakeDbStorage {
       0,
       'Grillen im Garten',
       'Saftige Steaks und Krosse Krabben, hier gibt es nur das beste.',
-      DateTime.now(),
+      DateTime(2020, 6, 23
+      ),
       20,
       'https://i.pinimg.com/originals/6d/78/96/6d7896263c68fca18d1ee10e44dd4160.jpg',
     ),

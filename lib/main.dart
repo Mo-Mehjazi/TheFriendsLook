@@ -6,6 +6,7 @@ import './pages/discovery_page.dart';
 import './pages/subscription_page.dart';
 import './pages/event_page.dart';
 import './pages/create_page.dart';
+import './pages/calendar_page.dart';
 
 void main() {
   runApp(App());
@@ -26,6 +27,7 @@ class App extends StatelessWidget {
         '/subscribed': (BuildContext context) => SubscriptionPage(),
         '/event': (BuildContext context) => EventPage(),
         '/create': (BuildContext context) => CreatePage(),
+        '/calendar': (BuildContext context) => CalendarPage(),
         //'/auth': (BuildContext context) => AuthPage(),
         //'/events': (BuildContext context) => EventsPage(),
         // ...
