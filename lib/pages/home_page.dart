@@ -12,9 +12,10 @@ class HomePage extends StatelessWidget {
       drawer: UserDrawer(),
       body: Column(
         children: <Widget>[
-          
+          Image(
+            image: AssetImage('assets/images/Logo.JPG'),
+          ),
         ],
-      
       ),
     );
   }
