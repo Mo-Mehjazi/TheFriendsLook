@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:the_friends_look/controllers/db_controller.dart';
 
+import '../controllers/db_controller.dart';
+import '../controllers/user_controller.dart';
 import '../models/event.dart';
 
 class EventPageArguments {
@@ -19,6 +21,8 @@ class EventPage extends StatelessWidget {
     final imageTag = args.imageTag;
 
     final author = DbController().getAuthorForEvent(event.id);
+    final isSubscribed = DbController().isSubscribed(event.id);
+    final btnText = isSubscribed ? "Unsubscribe" : "Subscribe";
 
     return Scaffold(
       appBar: AppBar(
@@ -50,7 +54,18 @@ class EventPage extends StatelessWidget {
                 padding: EdgeInsets.all(5),
               ),
             ],
-          )
+          ),
+          Row(children: <Widget>[
+            // TODO: style
+            RaisedButton(
+              onPressed: () {
+                if (!isSubscribed) {
+                  DbController().subscribe(UserController().getCurrentUser().id, event.id);
+                }
+              },
+              child: Text(btnText),
+            )
+          ],)
         ],
       ),
     );

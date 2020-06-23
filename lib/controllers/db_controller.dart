@@ -69,6 +69,10 @@ class DbController {
     dbStorage.events.add(event);
   }
 
+  bool isSubscribed(int eventId) {
+    return dbStorage.subscribtions.indexWhere((s) => s.eventId == eventId) >= 0;
+  }
+
   void subscribe(int userId, int eventId) {
     // TODO: Check for event max subscribers
 
