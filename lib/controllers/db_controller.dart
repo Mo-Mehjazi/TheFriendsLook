@@ -2,6 +2,7 @@ import '../models/event.dart';
 import '../models/user.dart';
 import '../models/subscription.dart';
 import '../util/fake_db_storage.dart';
+import './user_controller.dart';
 
 import 'package:collection/collection.dart';
 
@@ -87,7 +88,7 @@ class DbController {
 
   // Please dont look at this code, my eyes are already bleeding
   Map<DateTime, List> fetchCalendarEvents() {
-    final Map<DateTime, List> groupedEvents = groupBy(getAllEvents(), (event) => event.date);
+    final Map<DateTime, List> groupedEvents = groupBy(getSubscribedEvents(UserController().getCurrentUser().id), (event) => event.date);
     final Map<DateTime, List> result = {};
 
     groupedEvents.forEach((date, events) => {
