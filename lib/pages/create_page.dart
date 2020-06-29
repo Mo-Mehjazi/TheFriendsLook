@@ -1,6 +1,8 @@
 // Flutter
 import 'package:flutter/material.dart';
 
+import '../widgets/create_event_form.dart';
+
 class CreatePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -8,7 +10,7 @@ class CreatePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Create Event'),
       ),
-      body: Container(),
+      body: CreateEventForm(),
     );
   }
 }
