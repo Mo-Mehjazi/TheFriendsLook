@@ -13,7 +13,7 @@ For Mobile Application
 # Software Architecture
 ## 1. Introduction
 ### 1.1 Purpose
-This document provides a comprehensive architectural overview of the system in TheFriendsLook projekt, using a number of different architectural views to depict different aspects of the system. It is intended to capture and convey the significant architectural decisions which have been made on the system.
+This document provides a comprehensive architectural overview of the system in TheFriendsLook project, using a number of different architectural views to depict different aspects of the system. It is intended to capture and convey the significant architectural decisions which have been made on the system.
 
 ### 1.2 Scope
 This document describes the technical architecture of TheFriendsLook project, including the classes and use cases.
@@ -30,19 +30,20 @@ This document describes the technical architecture of TheFriendsLook project, in
 | mock Calander       | https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/images/MUCal.JPG |
 
 ## 2. Architectural Representation
-n/a
+![Alt-Text](./images/US%20new.png)
 
 ## 3. Architectural Goals and Constraints
-n/a
+the final goal is to implement a interface between the front end and the server, so that the data is visible to all users. Also it should then be possible to interact between different users.
 
 ## 4. Use-Case View
-n/a
+![Alt-Text](./images/UCD.jpg)
 
 ## 5. Logical View
-n/a
+![Alt-Text](./images/CD.png)
 
-## 6. Process View
-n/a
+## 6. Metrics
+in our blog:
+https://thefriendslook.wordpress.com/2020/06/08/week-7-second-term-code-metrics-with-sonarqube/
 
 ## 7. Deployment View
 n/a
