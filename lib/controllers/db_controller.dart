@@ -69,6 +69,8 @@ class DbController {
     var newId = dbStorage.events.length;
     event.id = newId;
 
+    print(event);
+
     dbStorage.events.add(event);
   }
 
