@@ -30,7 +30,7 @@ This document describes the technical architecture of TheFriendsLook project, in
 | mock Calander       | https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/images/MUCal.JPG |
 
 ## 2. Architectural Representation
-n/a
+![Alt-Text](./images/US%20new.png)
 
 ## 3. Architectural Goals and Constraints
 n/a
