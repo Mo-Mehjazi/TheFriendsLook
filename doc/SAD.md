@@ -41,8 +41,9 @@ the final goal is to implement a interface between the front end and the server,
 ## 5. Logical View
 ![Alt-Text](./images/CD.png)
 
-## 6. Process View
-n/a
+## 6. Metrics
+in our blog:
+https://thefriendslook.wordpress.com/2020/06/08/week-7-second-term-code-metrics-with-sonarqube/
 
 ## 7. Deployment View
 n/a
