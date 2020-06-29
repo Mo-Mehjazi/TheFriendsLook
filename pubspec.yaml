@@ -56,6 +56,9 @@ flutter:
     - assets/images/facebook_logo.svg
     - assets/images/twitter_logo.svg
     - assets/images/Logo.JPG
+    - assets/images/HG1.JPG
+    - assets/images/HG2.JPG
+    - assets/images/HG3.JPG
 
   # To add assets to your application, add an assets section, like this:
   # assets:
