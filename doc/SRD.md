@@ -1,33 +1,24 @@
 # TheFriendsLook
 
 ## Software Architecture Document
-For Mobile Application
+For<Mobile Application>
 
 ### Revision History
 
 | Date | Version | Description | Author 
 | --- | --- | --- | ---
 | 27.04.2020 | 1.0 | First version | Jan Lafferton
-| 25.06.2020 | 1.1 | Second version| Mo
 
 # Software Architecture
 ## 1. Introduction
 ### 1.1 Purpose
-This document provides a comprehensive architectural overview of the system in TheFriendsLook projekt, using a number of different architectural views to depict different aspects of the system. It is intended to capture and convey the significant architectural decisions which have been made on the system.
+n/a
 
 ### 1.2 Scope
-This document describes the technical architecture of TheFriendsLook project, including the classes and use cases.
+n/a
 
 ### 1.3 References
-| Title                         | link                                     |
-|-------------------------------|------------------------------------------|
-| SRS                           | https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/SRS.md |
-| UCS Calendar                  |https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/UCcal.md |
-| UCS Create Account 		| https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/UCcreat.md	|
-| UCS Create Events/Appointments 		| https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/UCappo.md |
-| mock up Events/Appointments       | https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/images/MUappo.jpeg |
-| mock Create Account       | https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/images/MUcreat.jpeg |
-| mock Calander       | https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/images/MUCal.JPG |
+n/a
 
 ## 2. Architectural Representation
 n/a
@@ -48,7 +39,7 @@ n/a
 n/a
 
 ## 8. Implementation View
-n/a
+n/
 
 ## 9. Data View
 n/a
