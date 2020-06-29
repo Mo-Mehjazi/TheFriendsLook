@@ -1,21 +1,22 @@
 # TheFriendsLook
 
 ## Software Architecture Document
-For<Mobile Application>
+For Mobile Application
 
 ### Revision History
 
 | Date | Version | Description | Author 
 | --- | --- | --- | ---
 | 27.04.2020 | 1.0 | First version | Jan Lafferton
+| 25.06.2020 | 1.1 | Second version| Mo
 
 # Software Architecture
 ## 1. Introduction
 ### 1.1 Purpose
-n/a
+This document provides a comprehensive architectural overview of the system in TheFriendsLook projekt, using a number of different architectural views to depict different aspects of the system. It is intended to capture and convey the significant architectural decisions which have been made on the system.
 
 ### 1.2 Scope
-n/a
+This document describes the technical architecture of TheFriendsLook project, including the classes and use cases.
 
 ### 1.3 References
 n/a
