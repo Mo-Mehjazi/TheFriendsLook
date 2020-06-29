@@ -72,6 +72,7 @@ class DbController {
     print(event);
 
     dbStorage.events.add(event);
+    dbStorage.subscribtions.add(Subscribtion(event.id, event.authorId));
   }
 
   bool isSubscribed(int eventId) {
