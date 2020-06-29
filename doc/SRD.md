@@ -19,7 +19,15 @@ This document provides a comprehensive architectural overview of the system in T
 This document describes the technical architecture of TheFriendsLook project, including the classes and use cases.
 
 ### 1.3 References
-n/a
+| Title                         | link                                     |
+|-------------------------------|------------------------------------------|
+| SRS                           | https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/SRS.md |
+| UCS Calendar                  |https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/UCcal.md |
+| UCS Create Account 		| https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/UCcreat.md	|
+| UCS Create Events/Appointments 		| https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/UCappo.md |
+| mock up Events/Appointments       | https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/images/MUappo.jpeg |
+| mock Create Account       | https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/images/MUcreat.jpeg |
+| mock Calander       | https://github.com/TheFriendsLook/TheFriendsLook/blob/master/doc/images/MUCal.JPG |
 
 ## 2. Architectural Representation
 n/a
